@@ -13,15 +13,15 @@ $(document).ready(function () {
     } else {
       startDate = startDate.subtract(1, "M");
       if (startDate.year() != 2018) {
-          startDate = moment("2018-12-01");
+        startDate = moment("2018-12-01");
       }
     }
     //  svuoto il container
     $(".container-calnedar").empty();
-    // faccio riparire le funzioni che lo rienpono
+    // faccio riparire le funzioni che lo riempono
     createCal(startDate);
     holiday(startDate);
-    });
+  });
 });
 function holiday(data) {
   $.ajax({
@@ -32,13 +32,13 @@ function holiday(data) {
       month: data.month(),
     },
     success: function (risposta) {
-      // se la lunghezza di risposta e maggiore di 0 allora fai function holiday
+      // se la lunghezza di risposta e maggiore di 0 allora fa lafunction holiday
       if (risposta.response.length > 0) {
-       for (var i = 0; i < risposta.response.length; i++) {
+        for (var i = 0; i < risposta.response.length; i++) {
           var item = $(
             'div[data-complete="' + risposta.response[i].date + '"]'
           );
-          item.find($('.festa')).append(risposta.response[i].name);
+          item.find($(".festa")).append(risposta.response[i].name);
           item.addClass("holiday");
         }
       }
@@ -47,7 +47,7 @@ function holiday(data) {
       alert("could not load calendar");
     },
   });
-}
+};
 function createCal(data) {
   var daysMonth = data.daysInMonth();
   var month = data.format("MMMM");
@@ -65,11 +65,11 @@ function createCal(data) {
     var html = template(context);
     $(".container-calnedar").append(html);
   }
-}
+};
 function addZero(n) {
   if (n < 10) {
     return 0 + "" + n;
   } else {
     return n;
   }
-}
+};
