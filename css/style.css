@@ -38,6 +38,7 @@ html{
     flex-wrap: wrap;
 }
 .container-days{
+    padding: 2rem;
     height: calc(100% / 4);
     background-color: var(--dark-blue);
     flex: 0 1 calc(100% / 8);
@@ -48,6 +49,9 @@ html{
     justify-content: space-around;
     align-items: center;
     font-size: 3rem;
+}
+.festa{
+    text-align: center;
 }
 i{
     cursor: pointer;
