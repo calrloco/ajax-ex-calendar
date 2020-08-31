@@ -47,7 +47,7 @@ function holiday(data) {
       alert("could not load calendar");
     },
   });
-};
+}
 function createCal(data) {
   var daysMonth = data.daysInMonth();
   var month = data.format("MMMM");
@@ -65,11 +65,11 @@ function createCal(data) {
     var html = template(context);
     $(".container-calnedar").append(html);
   }
-};
+}
 function addZero(n) {
   if (n < 10) {
     return 0 + "" + n;
   } else {
     return n;
   }
-};
+}
