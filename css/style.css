@@ -34,7 +34,7 @@ html{
 .container-calnedar{
     width: 100%;
     height: calc(100vh - 8rem);
-    background-color: #05d9e8;
+    background-color: var(--medium-blue);
     display: flex;
     flex-wrap: wrap;
 }

@@ -21,7 +21,7 @@ $(document).ready(function () {
     // faccio riparire le funzioni che lo rienpono
     createCal(startDate);
     holiday(startDate);
-  });
+    });
 });
 function holiday(data) {
   $.ajax({
@@ -34,7 +34,7 @@ function holiday(data) {
     success: function (risposta) {
       // se la lunghezza di risposta e maggiore di 0 allora fai function holiday
       if (risposta.response.length > 0) {
-        for (var i = 0; i < risposta.response.length; i++) {
+       for (var i = 0; i < risposta.response.length; i++) {
           var item = $(
             'div[data-complete="' + risposta.response[i].date + '"]'
           );
