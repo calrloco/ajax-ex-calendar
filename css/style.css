@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+:root{
+    --pink:#ff2a6d;
+    --dark-blue:#01012b;
+    --medium-blue:#005678;
+    --font-blue:#05d9e8;
+    --withe:#d1f7ff;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Orbitron', sans-serif;
+}
+.head-cal{
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: var(--medium-blue);
+    color: var(--withe);
+}
+.container-calnedar{
+    width: 100%;
+    height: calc(100vh - 8rem);
+    background-color: #05d9e8;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-days{
+    height: calc(100% / 4);
+    background-color: var(--dark-blue);
+    flex: 0 1 calc(100% / 8);
+    border: 2px solid var(--pink);
+    color: var(--font-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3rem;
+}
+i{
+    cursor: pointer;
+    padding: 3rem;
+}
