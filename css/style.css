@@ -48,3 +48,6 @@ i{
     cursor: pointer;
     padding: 3rem;
 }
+.holiday{
+  color: var(--pink);
+}
