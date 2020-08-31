@@ -24,6 +24,7 @@ html{
     font-size: 3rem;
     background-color: var(--medium-blue);
     color: var(--withe);
+    
 }
 .box-heading{
   flex: 0 1 40%;
@@ -38,7 +39,6 @@ html{
     flex-wrap: wrap;
 }
 .container-days{
-    padding: 2rem;
     height: calc(100% / 4);
     background-color: var(--dark-blue);
     flex: 0 1 calc(100% / 8);
