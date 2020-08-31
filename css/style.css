@@ -25,6 +25,11 @@ html{
     background-color: var(--medium-blue);
     color: var(--withe);
 }
+.box-heading{
+  flex: 0 1 40%;
+  display: flex;
+  justify-content: center;
+}
 .container-calnedar{
     width: 100%;
     height: calc(100vh - 8rem);
@@ -51,3 +56,4 @@ i{
 .holiday{
   color: var(--pink);
 }
+

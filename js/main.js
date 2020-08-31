@@ -13,7 +13,7 @@ $(document).ready(function () {
     } else {
       startDate = startDate.subtract(1, "M");
       if (startDate.year() != 2018) {
-        startDate = moment("2018-12-01");
+          startDate = moment("2018-12-01");
       }
     }
     //  svuoto il container
@@ -38,7 +38,7 @@ function holiday(data) {
           var item = $(
             'div[data-complete="' + risposta.response[i].date + '"]'
           );
-          item.append(risposta.response[i].name);
+          item.find($('.festa')).append(risposta.response[i].name);
           item.addClass("holiday");
         }
       }

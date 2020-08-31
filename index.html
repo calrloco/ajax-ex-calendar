@@ -20,7 +20,9 @@
   <body>
     <header class="head-cal">
       <i class="fa fa-arrow-left back command" aria-hidden="true"></i>
-      <h1 class="calndar-month" data-start="2018-01-01">Gennaio</h1>
+      <div class="box-heading">
+        <h1 class="calndar-month" data-start="2018-01-01">Gennaio</h1>
+      </div>
       <i class="fa fa-arrow-right forward command" aria-hidden="true"></i>
     </header>
     <div class="container-calnedar"></div>
@@ -29,6 +31,7 @@
         <p class="day">
           {{day}}
         </p>
+        <p class="festa"></p>
         <p class="month">
           {{month}}
         </p>
