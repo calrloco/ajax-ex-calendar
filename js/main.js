@@ -1,26 +1,24 @@
-// https://flynn.boolean.careers/exercises/api/holidays?year=2018&month=0
-/** "response": [
- * {"name": "capodanno",
- * "date": "2018-01-01"}
- * ] */
-
 $(document).ready(function () {
   // start date
   var startDate = moment("2018-01-01");
   createCal(startDate);
   holiday(startDate);
-  console.log(startDate.toString());
-  $("i.fa").click(function () {
+  // indietro e avanti con la data
+  $("i.command").click(function () {
     if ($(this).hasClass("forward") == true) {
       startDate = startDate.add(1, "M");
-      console.log(startDate.toString());
-     
+      if (startDate.year() != 2018) {
+        startDate = moment("2018-01-01");
+      }
     } else {
       startDate = startDate.subtract(1, "M");
-      console.log(startDate.toString());
+      if (startDate.year() != 2018) {
+        startDate = moment("2018-12-01");
+      }
     }
+    //  svuoto il container
     $(".container-calnedar").empty();
-    $('.container-days').empty();
+    // faccio riparire le funzioni che lo rienpono
     createCal(startDate);
     holiday(startDate);
   });
@@ -34,10 +32,15 @@ function holiday(data) {
       month: data.month(),
     },
     success: function (risposta) {
-      for (var i = 0; i < risposta.response.length; i++) {
-        var item = $('div[data-complete="' + risposta.response[i].date + '"]');
-        item.append(risposta.response[i].name);
-        item.addClass("holiday");
+      // se la lunghezza di risposta e maggiore di 0 allora fai function holiday
+      if (risposta.response.length > 0) {
+        for (var i = 0; i < risposta.response.length; i++) {
+          var item = $(
+            'div[data-complete="' + risposta.response[i].date + '"]'
+          );
+          item.append(risposta.response[i].name);
+          item.addClass("holiday");
+        }
       }
     },
     error: function () {
