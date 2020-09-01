@@ -53,6 +53,10 @@ html{
 .festa{
     text-align: center;
     font-size: 2rem;
+    flex: 0 1 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 i{
     cursor: pointer;

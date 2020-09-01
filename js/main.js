@@ -32,7 +32,7 @@ function holiday(data) {
       month: data.month(),
     },
     success: function (risposta) {
-      // se la lunghezza di risposta e maggiore di 0 allora fa lafunction holiday
+      // se la lunghezza di risposta e maggiore di 0 allora fa la function holiday
       if (risposta.response.length > 0) {
         for (var i = 0; i < risposta.response.length; i++) {
           var item = $(
